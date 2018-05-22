@@ -1,14 +1,9 @@
 version: '2'
 services:
-#About node_modules.
-#By default I override local node_modules directory.
-#This is intended for working without installing dependencies by using development images.
-  
-#Bitcore Full Node
   omnicore:
+    image: tigerseye/docker-omnicore:latest
     ports:
       - "18332:18332"
     volumes:
-      - /data:/data/bitcoreroot
-    #for prod network > command: bitcore create mynode
-    command: "/data/omnicore/bin/omnicored -datadir=/data/bitcoreroot -testnet"
+      - ./data:/data/usdt
+    command: "/data/omnicore/bin/omnicored -printtoconsole -datadir=/data/usdt -txindex -testnet"
