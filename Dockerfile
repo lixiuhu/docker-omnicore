@@ -1,7 +1,5 @@
 FROM ubuntu:xenial
 
-MAINTAINER Javier Ailbirt <jailbirt@theeye.io>
-
 ENV omnicore_version=omnicore-0.3.0
 
 LABEL omnicore_version="$omnicore_version" architecture="amd64"
