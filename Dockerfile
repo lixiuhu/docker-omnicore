@@ -16,4 +16,4 @@ RUN mv "$omnicore_version" omnicore
 EXPOSE 18332 8332
 
 
-CMD ["/data/omnicore/bin/omnicored", "-conf=/data/bitcoreroot", "-testnet", "-datadir=/data/bitcoreroot/data"]
+CMD ["/data/omnicore/bin/omnicored"]
